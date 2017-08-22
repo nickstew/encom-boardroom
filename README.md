@@ -40,6 +40,13 @@ feeds, but it certainly is possible.  I did split out the globe into its own
 [standalone library](https://github.com/arscan/encom-globe) that can be easily
 reused though.
 
+## Docker Startup
+
+```sh
+docker build -f Dockerfile -t encom-boardroom:latest .
+docker run --rm -itd -p 8000:8000 --name encom -t encom-boardroom:latest
+```
+
 ### Notable Dependencies
 
 * [Node.js](http://nodejs.org/)
