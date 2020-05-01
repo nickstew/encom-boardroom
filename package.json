@@ -9,7 +9,7 @@
     "express": "~4.3.0",
     "github-timeline-stream": "*",
     "grunt": "~1.0.3",
-    "jquery": "~2.1.0",
+    "jquery": "~3.5.0",
     "jquery-ui": "~1.10.5",
     "map-stream": "~0.1.0",
     "moment": "~2.6.0",
@@ -19,7 +19,8 @@
     "request": "~2.34.0",
     "serve-favicon": "~2.0.0",
     "three": "~0.66.2",
-    "wikipedia-stream": "*"
+    "wikipedia-stream": "*",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "grunt": "~1.0.3",
@@ -31,12 +32,15 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodejs stream-server.js"
+    "start": "nodejs stream-server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/arscan/encom-boardroom.git"
   },
   "author": "rscanlon@mit.edu",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
